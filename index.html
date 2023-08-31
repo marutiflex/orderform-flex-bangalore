@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Order Form</title>
+<style>
+    /* General styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2bebe;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: grid;
+  grid-gap: 5px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+textarea,
+input[type="datetime-local"] {
+  width: 96%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none; /* Disable resizing */
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 90%;
+  margin-left: 5%;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+  label {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+}
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Order Form</h1>
+    <form action="#" method="POST">
+      <label for="partyName">Party name</label>
+      <input type="text" id="partyName" name="partyName" required>
+      
+      <label for="contactNumber">Contact Number</label>
+      <input type="tel" id="contactNumber" name="contactNumber" pattern="[6-9][0-9]{9}" required>
+      
+      <label for="materialDescription">Material Description</label>
+      <textarea id="materialDescription" name="materialDescription" rows="4" required></textarea>
+      
+      <label for="requiredDateTime">Required date and Time</label>
+      <input type="datetime-local" id="requiredDateTime" name="requiredDateTime" required>
+      
+      <label for="salesExecutive">Sales Executive</label>
+      <input type="text" id="salesExecutive" name="salesExecutive" required>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
